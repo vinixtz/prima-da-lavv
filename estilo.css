@@ -1,0 +1,42 @@
+body{
+    background:linear-gradient(to right, pink, white,pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.coracao{
+    width: 100px;
+    height: 100px;
+    background: rgb(216, 88, 109);
+    transform: rotate(-45deg) scale(1);
+    animation: bater 3s linear infinite;
+}
+.coracao::after{
+    content: "";
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgb(216, 88, 109);
+    position: absolute;
+    top: -50%;
+    left: 0%;
+}
+.coracao::before{
+    content: "";
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgb(216, 88, 109);
+    position: absolute;
+    top: 0%;
+    right: -50%;
+    
+}
+@keyframes bater {
+    0% {transform: rotate(-45deg) scale(1);}
+    25% {transform: rotate(-45deg) scale(1.2);}
+    50%{transform: rotate(-45deg) scale(0.9);}
+    75%{transform: rotate(-45deg) scale(1.5);}
+}
